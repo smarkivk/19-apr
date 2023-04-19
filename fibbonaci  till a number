@@ -1,16 +1,14 @@
-class Main {
-  public static void main(String[] args) {
+import java.util.Scanner;
 
-    int n = 10, firstTerm = 0, secondTerm = 1;
-    System.out.println("Fibonacci Series till " + n + " terms:");
-
-    for (int i = 1; i <= n; ++i) {
-      System.out.print(firstTerm + ", ");
-
-      // compute the next term
-      int nextTerm = firstTerm + secondTerm;
-      firstTerm = secondTerm;
-      secondTerm = nextTerm;
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = input.nextInt();
+        int factorial = 1;
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        System.out.println("Factorial of " + num + " is " + factorial);
     }
-  }
 }
